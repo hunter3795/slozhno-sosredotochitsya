@@ -1,5 +1,351 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: var(--main-font, sans-serif);
+  background: var(--bg-image);
+  background-attachment: fixed;
+  font-size: var(--fn-size);
+}
+
+.header {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  background: var(--bg-image);
+  height: 100vh;
+  min-height: 668px;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  color: var(--sn-color);
+  block-size: 25px;
+  inline-size: 25px;
+  border-block-start: 1px solid var(--sn-color);
+  border-inline-end: 1px solid var(--sn-color);
+  justify-self: end;
+  margin-inline-end: 10px;
+  margin-block-start: 10px;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  block-size: 25px;
+  inline-size: 25px;
+  border-block-end: 1px solid var(--sn-color);
+  border-inline-start: 1px solid var(--sn-color);
+  align-self: end;
+  margin-inline-start: 10px;
+  margin-block-end: 10px;
+}
+
+.decorated_ellement {
+  position: absolute;
+  margin-block-start: 10px;
+  color: var(--sn-color);
+  justify-self: end;
+  margin-inline-end: 71px;
+}
+
+.decorated_ellement::before {
+  content: "REC";
+  position: absolute;
+  margin-inline-end: 38px;
+}
+
+.decorated_ellement::after {
+  content: "";
+  position: absolute;
+  justify-self: end;
+  margin-inline-start: 43px;
+  margin-block-start: 8px;
+  box-shadow: 0px 0px 4px 2px var(--sn-color);
+  inline-size: 9px;
+  block-size: 9px;
+  background-color: var(--sn-color);
+  border-radius: 54%;
+}
+
+.header__theme-menu {
+  align-self: center;
+  padding-block-start: 20px;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: end;
+  justify-items: center;
+  gap: 10px;
+  margin-inline-end: 10px;
+}
+
+.header__theme-menu-button {
+  color: var(--sn-color);
+  background-color: transparent;
+  border: none;
+  inline-size: 70px;
+  block-size: 26px;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--br-color-hover);
+}
+
+.header__theme-menu-button:focus,
+.link:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+
+.header_title {
+  color: var(--ht-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 #ff0070;
+  line-height: 95.7px;
+  align-self: center;
+  margin-inline-start: 10px;
+}
+
+.header_text {
+  align-self: center;
+  margin-inline-start: 10px;
+  margin-inline-end: 10px;
+  margin-block-start: 2.3em;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--txt-color);
+  font-weight: 700;
+  font-size: inherit;
+}
+
+.main {
+  margin-inline-start: 10px;
+  margin-inline-end: 10px;
+  margin-block-start: 40px;
+  display: grid;
+  gap: 50px;
+}
+
+.hard_focus,
+.concentration,
+.gold_fish {
+  display: grid;
+  gap: 20px;
+}
+
+.section_title {
+  color: var(--sn-color);
+  font-weight: 700;
+  font-size: inherit;
+}
+
+.hard_focus-list,
+.concentration-list,
+.gold_fish-list {
+  display: grid;
+  gap: 20px;
+}
+.concentration-list {
+  margin-block-start: 3px;
+}
+
+.hard_focus-list_item,
+.concentration-list_item,
+.gold_fish-list_item {
+  display: grid;
+  gap: 10px;
+}
+
+.text {
+  color: var(--txt-mn-color);
+  line-height: 1.3em;
+}
+
+.link {
+  text-shadow: 2px 2px var(--accent-color);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.link:focus-visible {
+  outline: 1px solid var(--txt-mn-color);
+}
+
+.lite {
+  font-weight: 400;
+}
+
+.gold_fish-list_item {
+  gap: 11px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.pictures,
+.conainer_pictures {
+  display: grid;
+  gap: 10px;
+}
+
+.footer {
+  height: 100vh;
+  min-height: 668px;
+  display: grid;
+  justify-content: center;
+  margin-block-start: 40px;
+}
+
+.footer-title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 2px 2px 0 #ff0070;
+  color: var(--ht-color);
+  align-self: center;
+}
+
+@media (768px<=width) {
+  .decorated-zone::before {
+    margin-inline-end: 20px;
+    margin-block-start: 20px;
+  }
+
+  .decorated-zone::after {
+    margin-inline-start: 20px;
+    margin-block-end: 20px;
+  }
+
+  .header_title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-inline-start: 0;
+  }
+  .decorated_ellement {
+    margin-block-start: 20px;
+    margin-inline-end: 81px;
+  }
+  .header_container_text {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header_text {
+    grid-column: 2/3;
+    margin-inline-start: 0;
+    margin-inline-end: 20px;
+    margin-block-start: -8em;
+  }
+
+  .main {
+    margin-inline-start: 20px;
+    margin-inline-end: 20px;
+    margin-block-start: 60px;
+    gap: 80px;
+  }
+
+  .hard_focus,
+  .gold_fish,
+  .conainer_pictures {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hard_focus-list,
+  .gold_fish-list {
+    grid-column: 2/4;
+  }
+
+  .header__theme-menu-list {
+    margin-inline-end: 20px;
+  }
+  .header__theme-menu {
+    align-self: end;
+    padding-block-end: 3em;
+  }
+
+  .section_title {
+    inline-size: calc((100vw - 60px) / 3);
+  }
+  .conainer_pictures,
+  .pictures {
+    gap: 20px;
+  }
+
+  .pictures_sunset {
+    grid-row: 1/2;
+    grid-column: 1/3;
+  }
+
+  .pictures_ice-cream {
+    grid-row: 1/3;
+    grid-column: 3/4;
+  }
+
+  .pictures_tape {
+    grid-row: 2/4;
+    grid-column: 1/2;
+  }
+
+  .pictures_street {
+    grid-column: 2/4;
+  }
+
+  .footer {
+    margin-block-start: 60px;
+  }
+  .footer-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+@media (1024px<=width) {
+  .header__theme-menu {
+    display: grid;
+    align-self: auto;
+    justify-content: center;
+    padding-block-start: 0;
+    padding-block-end: 0;
+  }
+
+  .header__theme-menu-list {
+    display: grid;
+    grid-template-rows: none;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 10px;
+    width: 230px;
+    margin-inline-end: 0;
+    margin-block-start: 20px;
+  }
+
+  .header_text {
+    margin-block-start: -4.5em;
+  }
+
+  .section_title {
+    inline-size: calc((100vw - 40px - 40px) / 3);
+  }
+
+  .concentration-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .concentration-list_item {
+    grid-auto-rows: max-content;
+  }
 }

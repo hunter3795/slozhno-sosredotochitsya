@@ -3,10 +3,49 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root.theme-light {
+  --bg-color: #FFF1F7;
+  --accent-color: #FF8DCB;
+  --sn-color: #353430;
+  --ht-color: #FFC2E6;
+  --txt-color: #353430;
+  --txt-mn-color: #353430;
+  --br-color-hover: #32312D66;
+
+}
+
+/* Остальные стили */
+
+@media (prefers-color-scheme: light) {
+:root {
+      /* Дублируем переменные светлой темы */    
+      --bg-color: #FFF1F7;
+      --accent-color: #FF8DCB; 
+      --sn-color: #353430;
+      --ht-color: #FFC2E6;
+      --txt-color: #353430;
+      --bg-image: url(../images/cover-image-light.png) no-repeat center / cover;
+      --txt-mn-color: #353430;
+      --br-color-hover: #32312D66;
+}
+  }
+
 
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --bg-color: #FFF1F7;
+  --accent-color: #FF8DCB; 
+  --sn-color: #353430;
+  --ht-color: #FFC2E6;
+  --txt-color: #353430;
+  --bg-image: url(../images/cover-image-light.png) no-repeat center / cover;
+  --txt-mn-color: #353430;
+  --br-color-hover: #32312D66;
+}
+
+.theme_light .decorated_ellement{
+  display: none;
 }
