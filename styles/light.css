@@ -18,7 +18,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     /* Дублируем переменные светлой темы */
-    с: #fff1f7;
+    --bg-color: #fff1f7;
     --accent-color: #ff8dcb;
     --sn-color: #353430;
     --ht-color: #ffc2e6;
@@ -42,6 +42,7 @@
   --bg-image: url(../images/cover-image-light.png) no-repeat center / cover;
   --txt-mn-color: #353430;
   --br-color-hover: #32312d66;
+  background-color: var(--bg-color);
 }
 
 .theme_light .decorated_ellement {
