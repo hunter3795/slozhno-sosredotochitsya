@@ -17,6 +17,7 @@
     --bg-image: url(../images/cover-image-light.png) no-repeat center / cover;
     --txt-mn-color: #353430;
     --br-color-hover: #32312d66;
+    --dr-el-color: transparent;
   }
 }
 
@@ -34,8 +35,5 @@
   --txt-mn-color: #353430;
   --br-color-hover: #32312d66;
   background-color: var(--bg-color);
-}
-
-.theme_light .decorated_ellement {
-  display: none;
+  --dr-el-color: transparent;
 }

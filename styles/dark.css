@@ -16,6 +16,7 @@
     --bg-image: url(../images/cover-image-dark.png) no-repeat center / cover;
     --txt-mn-color: #f1b2ce;
     --br-color-hover: #ff007066;
+    --dr-el-color: #ff0070;
   }
 }
 
@@ -34,4 +35,5 @@
   --bg-image: url(../images/cover-image-dark.png) no-repeat center / cover;
   --txt-mn-color: #f1b2ce;
   --br-color-hover: #ff007066;
+  --dr-el-color: #ff0070;
 }

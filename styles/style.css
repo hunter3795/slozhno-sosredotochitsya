@@ -22,8 +22,8 @@
   border-block-start: 1px solid var(--sn-color);
   border-inline-end: 1px solid var(--sn-color);
   justify-self: end;
-  top: 10px;
-  right: 10px;
+  margin-inline-start: 10px;
+  margin-inline-end: 10px;
 }
 
 .decorated-zone::after {
@@ -34,14 +34,14 @@
   border-block-end: 1px solid var(--sn-color);
   border-inline-start: 1px solid var(--sn-color);
   align-self: end;
-  left: 10px;
-  bottom: 10px;
+  margin-inline-start: 10px;
+  margin-inline-end: 10px;
 }
 
 .decorated_ellement {
   position: absolute;
   top: 10px;
-  color: var(--sn-color);
+  color: var(--dr-el-color);
   justify-self: end;
   right: 71px;
 }
@@ -58,10 +58,10 @@
   justify-self: end;
   left: 42px;
   top: 8px;
-  box-shadow: 0px 0px 4px 2px var(--sn-color);
+  box-shadow: 0px 0px 4px 2px var(--dr-el-color);
   inline-size: 9px;
   block-size: 9px;
-  background-color: var(--sn-color);
+  background-color: var(--dr-el-color);
   border-radius: 54%;
 }
 
@@ -225,13 +225,13 @@ img {
 
 @media (768px<=width) {
   .decorated-zone::before {
-    right: 20px;
-    top: 20px;
+    margin-inline-end: 20px;
+    margin-block-start: 20px;
   }
 
   .decorated-zone::after {
-    left: 20px;
-    bottom: 20px;
+    margin-inline-start: 20px;
+    margin-block-end: 20px;
   }
 
   .header_title {
