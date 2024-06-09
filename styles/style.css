@@ -22,7 +22,7 @@
   border-block-start: 1px solid var(--sn-color);
   border-inline-end: 1px solid var(--sn-color);
   justify-self: end;
-  margin-inline-start: 10px;
+  margin-block-start: 10px;
   margin-inline-end: 10px;
 }
 
@@ -35,7 +35,7 @@
   border-inline-start: 1px solid var(--sn-color);
   align-self: end;
   margin-inline-start: 10px;
-  margin-inline-end: 10px;
+  margin-block-end: 10px;
 }
 
 .decorated_ellement {
