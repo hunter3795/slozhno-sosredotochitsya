@@ -3,15 +3,6 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme-light {
-  --bg-color: #fff1f7;
-  --accent-color: #ff8dcb;
-  --sn-color: #353430;
-  --ht-color: #ffc2e6;
-  --txt-color: #353430;
-  --txt-mn-color: #353430;
-  --br-color-hover: #32312d66;
-}
 
 /* Остальные стили */
 

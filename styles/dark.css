@@ -3,19 +3,15 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme-dark {
-  --accent-color: #ff0070;
-  --bg-color: #000028;
-  --ht-color: #db00ff;
-  --bg-image: url(../images/cover-image-dark.png) no-repeat center / cover;
-  --txt-mn-color: #f1b2ce;
-  --br-color-hover: #ff007066;
-}
 
 @media (prefers-color-scheme: dark) {
   :root {
     --accent-color: #ff0070;
+    --main-font: "IBM Plex mono";
     --bg-color: #000028;
+    --txt-color: #000028;
+    --sn-color: #ff0070;
+    --fn-size: 18px;
     --ht-color: #db00ff;
     --bg-image: url(../images/cover-image-dark.png) no-repeat center / cover;
     --txt-mn-color: #f1b2ce;
@@ -29,7 +25,11 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --accent-color: #ff0070;
+  --main-font: "IBM Plex mono";
   --bg-color: #000028;
+  --txt-color: #000028;
+  --sn-color: #ff0070;
+  --fn-size: 18px;
   --ht-color: #db00ff;
   --bg-image: url(../images/cover-image-dark.png) no-repeat center / cover;
   --txt-mn-color: #f1b2ce;
