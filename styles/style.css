@@ -7,6 +7,7 @@
 }
 
 .header {
+  position: relative;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   height: 100vh;
@@ -22,8 +23,8 @@
   border-block-start: 1px solid var(--sn-color);
   border-inline-end: 1px solid var(--sn-color);
   justify-self: end;
-  margin-block-start: 10px;
-  margin-inline-end: 10px;
+  top: 10px;
+  right: 10px;
 }
 
 .decorated-zone::after {
@@ -34,8 +35,8 @@
   border-block-end: 1px solid var(--sn-color);
   border-inline-start: 1px solid var(--sn-color);
   align-self: end;
-  margin-inline-start: 10px;
-  margin-block-end: 10px;
+  left: 10px;
+  bottom: 10px;
 }
 
 .decorated_ellement {
@@ -50,6 +51,7 @@
   content: "rec";
   text-transform: uppercase;
   position: absolute;
+  inset: 0;
 }
 
 .decorated_ellement::after {
@@ -214,6 +216,7 @@ img {
   display: grid;
   justify-content: center;
   margin-block-start: 40px;
+  position: relative;
 }
 
 .footer-title {
@@ -225,26 +228,29 @@ img {
 
 @media (768px<=width) {
   .decorated-zone::before {
-    margin-inline-end: 20px;
-    margin-block-start: 20px;
+    right: 20px;
+    top: 20px;
   }
 
   .decorated-zone::after {
-    margin-inline-start: 20px;
-    margin-block-end: 20px;
+    left: 20px;
+    bottom: 20px;
   }
 
   .header_title {
     margin-inline-start: 0;
   }
+  
   .decorated_ellement {
     top: 20px;
     right: 81px;
   }
+
   .header_container_text {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+
   .header_text {
     grid-column: 2/3;
     display: flex;
@@ -260,7 +266,7 @@ img {
     gap: 80px;
   }
 
-  .section_columns,
+  .section_content,
   .conainer_pictures {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -273,6 +279,7 @@ img {
   .header__theme-menu-list {
     margin-inline-end: 20px;
   }
+
   .header__theme-menu {
     align-self: end;
     padding-block-end: 3em;
@@ -281,6 +288,7 @@ img {
   .section_title {
     inline-size: calc((100vw - 60px) / 3);
   }
+
   .conainer_pictures,
   .pictures {
     gap: 20px;
